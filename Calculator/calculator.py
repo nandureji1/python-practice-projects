@@ -25,13 +25,13 @@ for b in buttons:
       action = calculate
    else:
       action = lambda x=b: press(x)
-   tk.Button(root, text=b, font=("Arial",18),width=4, command=action).grid(row=row, column=col)
+   tk.Button(root, text=b, font=("Arial",18),width=4, command=action, activebackground="orange").grid(row=row, column=col)
    col += 1
    if col == 4:
       col = 0
       row += 1
 
-tk.Button(root,text="C", font=("Arial",18),command=clear).grid(row=row, column=0, columnspan=4, sticky="we")
+tk.Button(root,text="C", font=("Arial",18),command=clear,activebackground="green").grid(row=row, column=0, columnspan=4, sticky="we")
 
 root.mainloop() #keeps the window open
 
